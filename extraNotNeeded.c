@@ -10,11 +10,10 @@ typedef struct PascalsTriangle
 
 
 //expand the array when size hits capacity. Check for this before doing another level
-void expandArray( PascalsTriangle triangle )  //Note: Depending on the circumstance you might need to pass pointer
+void expandArray( PascalsTriangle triangle )  //Note: Depending on the circumstance you might need to pass pointer. If that is the case use -> instead of dot operator.
 {
- PascalsTriangle newLevelArray;
-  
- int index;
+ int *newLevelArray;
+ int  index;
   
  if( triangle.size == triangle.capacity )
  {
